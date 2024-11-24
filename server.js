@@ -14,6 +14,7 @@ app.use("/tours", require("./routers/tourRouter"));
 app.use("/users", require("./routers/userRouter"));
 app.use(errorHandler)
 
+
 app.listen(port, () => {
     console.log(`listen to port ${port}`);
 })

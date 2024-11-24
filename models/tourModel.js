@@ -15,20 +15,24 @@ const tourSchema = mongoose.Schema({
     },
     pick_up:{
         type: String,
-        required: [true, "please add the "],
+        required: [true, "please add the pick_up"],
     },
     meeting_point:{
         type: String,
-        required: [true, "please add the contact phone"],
+        required: [true, "please add the meeting_point"],
     },
     drop_off:{
         type: String,
-        required: [true, "please add the contact phone"],
+        required: [true, "please add the drop_off"],
     },
     duration:{
         type: Number,
-        required: [true, "please add the contact phone"],
+        required: [true, "please add the duration"],
     },
+    duration_unit:{
+        type: String,
+        required:[[true, "please add the duration_unit"],]
+    }
     
 },{
     timestamps: true,

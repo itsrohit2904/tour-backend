@@ -42,7 +42,7 @@ const createHotel = asyncHandler ( async (req, res) => {
     console.log("Received POST request with data: ", req.body);
     const { title, description, pick_up, meeting_point, drop_off, duration ,duration_unit,Uid} = req.body;
     // Validate input fields
-    if (!title || !description || !pick_up || !meeting_point || !drop_off || !duration||!Uid) {
+    if (!title || !description || !pick_up || !meeting_point || !drop_off || !duration || !duration_unit ||!Uid) {
         res.status(400);
         throw new Error("fields are mandatory.");
     }
