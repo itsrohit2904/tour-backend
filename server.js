@@ -7,7 +7,7 @@ const dotenv = require("dotenv").config();
 connectDb();
 const app = express();
 
-const port = 3001;
+const port = process.env.PORT;
 app.use(cors())
 app.use(express.json());
 app.use("/tours", require("./routers/tourRouter"));
