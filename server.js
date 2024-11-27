@@ -16,9 +16,21 @@ const app = express();
 // Define the port to listen on, default to 3001 if not specified in the environment
 const port = process.env.PORT || 3001;
 
+
+app.set("view engine", "ejs");
+
+
+
 // Middleware setup
 app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse incoming requests with JSON payload
+
+
+app.get("/", (req,res) => {
+    res.render("pages/index")
+})
+
+
 
 // Define routes for different resources
 app.use("/tours", require("./routers/tourRouter")); // Tours routes

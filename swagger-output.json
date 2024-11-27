@@ -5,7 +5,7 @@
     "description": "API for managing tours and users",
     "version": "1.0.0"
   },
-  "host": "tour-backend-kuvb.onrender.com",
+  "host": "tour-backend-1.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

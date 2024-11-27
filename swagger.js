@@ -7,7 +7,7 @@ const doc = {
         title: 'My API', // API title
         description: 'API for managing tours and users', // Short description of the API
     },
-    host: 'tour-backend-kuvb.onrender.com', // Host URL for the deployed API
+    host: 'tour-backend-1.onrender.com', // Host URL for the deployed API
     schemes: ['https'], // Use HTTPS for secure access
 };
 
