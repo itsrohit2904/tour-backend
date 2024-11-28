@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs")
 const allUsers = asyncHandler(async (req, res) => {
     // Fetch all tours for the specific user (based on Uid)
     const user = await User.find();
-    res.status(200).json(Useu);
+    res.status(200).json(user);
 });
 
 //@desc register the user
