@@ -23,6 +23,12 @@ const getTour = asyncHandler(async (req, res) => {
     res.status(200).json(tour);
 });
 
+const allTours = asyncHandler(async (req, res) => {
+    // Fetch all tours for the specific user (based on Uid)
+    const tour = await Tour.find();
+    res.status(200).json(tour);
+});
+
 // @desc Get a single hotel by tour ID and user ID
 // @route GET /:uid/:tid
 // @access Public
@@ -107,4 +113,4 @@ const deleteTour = asyncHandler(async (req, res) => {
     res.status(200).json({ success: true, message: "Tour deleted", data: tour });
 });
 
-module.exports = { getTours, getTour, createTour, updateTour, deleteTour, getupdateTour };
+module.exports = { getTours, getTour, createTour, updateTour, deleteTour, getupdateTour, allTours };

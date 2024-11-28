@@ -6,13 +6,19 @@ const {
     updateTour,
     deleteTour,
     getupdateTour,
+    allTours
+
 } = require("../controller/tourController");
 const router = express.Router();
+
+
 
 // @route GET /:id
 // @desc Retrieve all tours for a specific user (identified by user ID)
 router.route("/:id").get(getTours);
 
+
+router.route("/").get(allTours);
 // @route GET /:id/:title
 // @desc Retrieve a specific tour by user ID and tour title
 router.route("/:id/:title").get(getTour);
